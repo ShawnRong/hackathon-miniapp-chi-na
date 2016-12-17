@@ -83,7 +83,7 @@ Page({
         })
 
         wx.request({
-          url: 'https://wechatcitdevhfzdlijkdc.devcloud.acquia-sites.com/geocoder/v2',
+          url: 'http://api.map.baidu.com/geocoder/v2/',
           data:{
             location:page.data.latitude+','+page.data.longitude,
             output:'json',

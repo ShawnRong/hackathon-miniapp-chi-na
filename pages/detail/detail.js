@@ -10,7 +10,7 @@ Page({
     var page = this
 
     wx.request({
-      url: 'https://wechatcitdevhfzdlijkdc.devcloud.acquia-sites.com/ajax/json/shop/wizard/BasicHideInfoAjaxFP',
+      url: 'http://www.dianping.com/ajax/json/shop/wizard/BasicHideInfoAjaxFP',
       data: {
           shopId:options.shopId
       },
