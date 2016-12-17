@@ -119,24 +119,12 @@ Page({
 
     var status = page.data.loadStatus
     if(status=="success"){
-      page.setData({
-        loadStatus:"fail"
-      })
       wx.request({
-      url: 'https://wechatcitdevhfzdlijkdc.devcloud.acquia-sites.com/search/map/ajax/json',
-      data:{
-        cityId:11,
-        cityEnName:'ningbo',
-        shopType:10,
-        categoryId:10,
-        shopSortItem:1,
-        keyword:keyword,
-        searchType:1
-      },
-      // data: 'cityId=11&cityEnName=ningbo&shopType=10&categoryId=10&shopSortItem=1&keyword='+keyword+'&searchType=1',
-      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      header: {
-        'Content-Type': 'application/json'
+        url: 'http://www.dianping.com/search/map/ajax/json',
+        data: 'cityId=11&cityEnName=ningbo&shopType=10&categoryId=10&shopSortItem=1&keyword='+keyword+'&searchType=1',
+        method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        header: {
+          'Content-Type': 'application/x-www-form-urlencoded'
       }, // 设置请求的 header
       success: function(res){
         // success
